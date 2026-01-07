@@ -56,7 +56,7 @@ export default function ClymeAI() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="cursor-pointer flex items-center space-x-3" onClick={() => scrollToSection('hero')}>
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-400 to-cyan-400 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <h1 className="text-2xl font-bold">Clyme</h1>
@@ -66,7 +66,7 @@ export default function ClymeAI() {
               <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:opacity-70 transition-opacity">Services</button>
               <button onClick={() => scrollToSection('portfolio')} className="text-sm font-medium hover:opacity-70 transition-opacity">Portfolio</button>
               <button onClick={() => scrollToSection('team')} className="text-sm font-medium hover:opacity-70 transition-opacity">Team</button>
-              <button onClick={() => scrollToSection('contact')} className="px-6 py-2.5 bg-gradient-to-r from-orange-500 to-cyan-500 text-white text-sm font-semibold rounded-lg hover:scale-105 transition-transform">Schedule Demo</button>
+              <button onClick={() => scrollToSection('contact')} className="px-6 py-2.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold rounded-lg hover:scale-105 transition-transform">Schedule Demo</button>
             </div>
 
             <button className="md:hidden text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -81,16 +81,17 @@ export default function ClymeAI() {
               <button onClick={() => scrollToSection('services')} className="block w-full text-left text-sm font-medium py-2">Services</button>
               <button onClick={() => scrollToSection('portfolio')} className="block w-full text-left text-sm font-medium py-2">Portfolio</button>
               <button onClick={() => scrollToSection('team')} className="block w-full text-left text-sm font-medium py-2">Team</button>
-              <button onClick={() => scrollToSection('contact')} className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-cyan-500 text-white text-sm font-semibold rounded-lg">Schedule Demo</button>
+              <button onClick={() => scrollToSection('contact')} className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold rounded-lg">Schedule Demo</button>
             </div>
           </div>
         )}
       </nav>
 
-      {/* Hero Section with Coral to Cyan Gradient */}
+      {/* Hero Section with Purple to Blue Gradient */}
       <section id="hero" className="pt-32 pb-20 px-6 lg:px-8 relative overflow-hidden min-h-screen flex items-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-200 via-pink-200 to-cyan-300"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-purple-600 to-blue-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/50 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight mb-6 text-white drop-shadow-lg">
@@ -102,7 +103,7 @@ export default function ClymeAI() {
             AI-powered websites, SEO optimization, and lead generation that grows your business while you sleep.
           </p>
           
-          <button onClick={() => scrollToSection('contact')} className="px-10 py-5 bg-white text-black font-bold rounded-xl text-lg hover:scale-105 transition-transform inline-flex items-center space-x-2 shadow-2xl">
+          <button onClick={() => scrollToSection('contact')} className="px-10 py-5 bg-white text-purple-900 font-bold rounded-xl text-lg hover:scale-105 transition-transform inline-flex items-center space-x-2 shadow-2xl">
             <span>Book a Demo</span>
             <span>→</span>
           </button>
@@ -115,8 +116,8 @@ export default function ClymeAI() {
           <h3 className="text-center text-2xl font-bold mb-12">Build Websites. Rank Higher. Generate More Leads.</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {['SEO Rankings', 'Website Speed', 'Lead Generation', 'Conversion Rate'].map((label, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 hover:border-orange-500/30 hover:-translate-y-1 transition-all">
-                <div className="text-5xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-2">10x</div>
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 hover:border-purple-500/30 hover:-translate-y-1 transition-all">
+                <div className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">10x</div>
                 <div className="text-gray-400 font-medium">{label}</div>
               </div>
             ))}
@@ -134,15 +135,15 @@ export default function ClymeAI() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: <Code className="w-6 h-6" />, title: "Website Builder Agent", desc: "Translates your vision into high-performance websites with modern design, responsive layouts, and optimized code.", color: "orange" },
-              { icon: <Target className="w-6 h-6" />, title: "SEO Optimizer Agent", desc: "Analyzes keywords, optimizes content, and implements technical SEO to rank your site on page one.", color: "cyan" },
-              { icon: <Users className="w-6 h-6" />, title: "Lead Generation Agent", desc: "Creates smart forms, landing pages, and automation flows that convert visitors into qualified leads.", color: "teal" },
-              { icon: <BarChart3 className="w-6 h-6" />, title: "Analytics Agent", desc: "Tracks performance, identifies opportunities, and provides actionable insights for continuous improvement.", color: "emerald" },
-              { icon: <Globe className="w-6 h-6" />, title: "Content Strategy Agent", desc: "Develops content calendars, writes optimized copy, and maintains brand consistency across all channels.", color: "sky" },
-              { icon: <Zap className="w-6 h-6" />, title: "Custom Workflow Agents", desc: "Tailored agents built specifically for your unique business processes and requirements.", color: "amber" }
+              { icon: <Code className="w-6 h-6" />, title: "Website Builder Agent", desc: "Translates your vision into high-performance websites with modern design, responsive layouts, and optimized code.", color: "purple" },
+              { icon: <Target className="w-6 h-6" />, title: "SEO Optimizer Agent", desc: "Analyzes keywords, optimizes content, and implements technical SEO to rank your site on page one.", color: "blue" },
+              { icon: <Users className="w-6 h-6" />, title: "Lead Generation Agent", desc: "Creates smart forms, landing pages, and automation flows that convert visitors into qualified leads.", color: "indigo" },
+              { icon: <BarChart3 className="w-6 h-6" />, title: "Analytics Agent", desc: "Tracks performance, identifies opportunities, and provides actionable insights for continuous improvement.", color: "violet" },
+              { icon: <Globe className="w-6 h-6" />, title: "Content Strategy Agent", desc: "Develops content calendars, writes optimized copy, and maintains brand consistency across all channels.", color: "fuchsia" },
+              { icon: <Zap className="w-6 h-6" />, title: "Custom Workflow Agents", desc: "Tailored agents built specifically for your unique business processes and requirements.", color: "purple" }
             ].map((agent, i) => (
-              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-orange-500/30 transition-all">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500/20 to-cyan-500/20 flex items-center justify-center mb-4 text-orange-400`}>
+              <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all">
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center mb-4 text-purple-400`}>
                   {agent.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{agent.title}</h3>
@@ -181,8 +182,8 @@ export default function ClymeAI() {
               { num: "03", title: "Manual Lead Generation", desc: "Chasing leads manually, using spreadsheets, and watching potential customers slip away because you don't have automated systems in place." },
               { num: "04", title: "No Integration", desc: "Website, SEO tools, CRM, and marketing platforms all disconnected—creating data silos and wasting hours on manual work." }
             ].map((problem, i) => (
-              <div key={i} className="bg-white/5 border-l-4 border-orange-400 p-8 rounded-xl hover:bg-white/10 transition-all">
-                <div className="text-3xl font-bold text-orange-400 mb-4">{problem.num}</div>
+              <div key={i} className="bg-white/5 border-l-4 border-purple-500 p-8 rounded-xl hover:bg-white/10 transition-all">
+                <div className="text-3xl font-bold text-purple-400 mb-4">{problem.num}</div>
                 <h3 className="text-2xl font-bold mb-3">{problem.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{problem.desc}</p>
               </div>
@@ -221,18 +222,18 @@ export default function ClymeAI() {
               { icon: <Users className="w-8 h-8" />, title: "Monthly Retainer", desc: "Ongoing optimization", popular: true },
               { icon: <Code className="w-8 h-8" />, title: "Per Agent", desc: "Modular rollout", popular: false }
             ].map((plan, i) => (
-              <div key={i} className={`bg-white/5 ${plan.popular ? 'border-2 border-orange-500' : 'border border-white/10'} rounded-2xl p-8 hover:bg-white/10 hover:scale-105 transition-all relative`}>
+              <div key={i} className={`bg-white/5 ${plan.popular ? 'border-2 border-purple-500' : 'border border-white/10'} rounded-2xl p-8 hover:bg-white/10 hover:scale-105 transition-all relative`}>
                 {plan.popular && (
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-orange-500 to-cyan-500 text-white text-xs font-bold rounded-full">
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-xs font-bold rounded-full">
                     MOST POPULAR
                   </div>
                 )}
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500/10 to-cyan-500/10 flex items-center justify-center mb-6 text-orange-400">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500/10 to-blue-500/10 flex items-center justify-center mb-6 text-purple-400">
                   {plan.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
                 <p className="text-gray-400 mb-6">{plan.desc}</p>
-                <button onClick={() => scrollToSection('contact')} className={`w-full px-6 py-3 ${plan.popular ? 'bg-gradient-to-r from-orange-500 to-cyan-500 text-white' : 'border border-white/20'} rounded-lg hover:bg-white/5 transition-all font-medium`}>
+                <button onClick={() => scrollToSection('contact')} className={`w-full px-6 py-3 ${plan.popular ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white' : 'border border-white/20'} rounded-lg hover:bg-white/5 transition-all font-medium`}>
                   Learn More
                 </button>
               </div>
@@ -249,8 +250,8 @@ export default function ClymeAI() {
           <div className="space-y-0">
             {clients.map((client, i) => (
               <a key={i} href={client.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-6 px-4 border-b border-white/10 hover:bg-white/5 transition-all group">
-                <span className="text-lg font-medium group-hover:text-orange-400 transition-colors">{client.name}</span>
-                <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-orange-400 transition-colors" />
+                <span className="text-lg font-medium group-hover:text-purple-400 transition-colors">{client.name}</span>
+                <ExternalLink className="w-5 h-5 text-gray-500 group-hover:text-purple-400 transition-colors" />
               </a>
             ))}
           </div>
@@ -300,7 +301,7 @@ export default function ClymeAI() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-5xl font-bold mb-6">Ready to Transform Your Digital Presence?</h2>
           <p className="text-xl text-gray-400 mb-12">Let's build your website, optimize your SEO, and automate your lead generation with AI</p>
-          <button className="px-12 py-6 bg-gradient-to-r from-orange-500 to-cyan-500 text-white font-bold rounded-xl text-xl hover:scale-105 transition-transform shadow-2xl">
+          <button className="px-12 py-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-xl text-xl hover:scale-105 transition-transform shadow-2xl">
             Book Your Demo
           </button>
         </div>
@@ -312,7 +313,7 @@ export default function ClymeAI() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-400 to-cyan-400 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-blue-600 flex items-center justify-center">
                   <Zap className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="text-lg font-bold">Clyme</h3>
